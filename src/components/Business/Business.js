@@ -2,7 +2,8 @@ import React form 'react';
 import ReactDOM from 'react-dom';
 
 
-var business: { imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
+var business = { 
+	imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
   name: 'MarginOtto Pizzeria',
   address: '1010 Paddington Way',
   city: 'Flavortown',
@@ -10,10 +11,10 @@ var business: { imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/
   zipCode: '10101',
   category: 'Italian',
   rating: 4.5,
-  reviewCount: 90}
+  reviewCount: 90};
 
   class Business extends React.Component{
-  	rander(){
+  	rander({
   		<div className="Business">
 		  <div className="image-container">
 		    <img src='https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg' alt=''/>
@@ -27,10 +28,11 @@ var business: { imageSrc: 'https://s3.amazonaws.com/codecademy-content/programs/
 		    </div>
 		    <div className="Business-reviews">
 		      <h3>ITALIAN</h3>
-		      <h3 className="rating">4.5 stars}</h3>
+		      <h3 className="rating">4.5 stars</h3>
 		      <p>90 reviews</p>
 		    </div>
 		  </div>
 		</div>
+		)
   	}
   }
