@@ -31,6 +31,11 @@ var business = {
 		      <h3 className="rating">4.5 stars</h3>
 		      <p>90 reviews</p>
 		    </div>
+		    <div className="Business-reviews">
+		      <h3>ITALIAN</h3>
+		      <h3 className="rating">4.5 stars</h3>
+		      <p>90 reviews</p>
+		    </div>
 		  </div>
 		</div>
 		)
