@@ -1,24 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './Book.css'
-import BookArray from './BookData.js'
+import bookArray from './BookData.js'
 
-function BookList() {
-  const result = []
-  BookArray.map((book, index) => {
-    result.push(
-      <Book
-        title={book.title}
-        author={book.author}
-        img={book.img}
-        price={book.price}
-      />
-    )
-  })
-  return <div className="bookList">{result}</div>
+function BookPage() {
+  return (
+    <div className="bookPage">
+      <h1>List of best selling books</h1>
+      <BookList />
+    </div>
+  )
 }
 
-const Book = ({ img, title, author, price }) => {
+const BookList = () => {
+  const result = []
+
+  return (
+    <div className="bookList">
+      {bookArray.map((book) => {
+        // const { img, title, author, price, id } = book
+        return <Book {...book} key={book.id} />
+      })}
+    </div>
+  )
+}
+
+const Book = ({ img, title, author, price, id }) => {
+  console.log({ img, title, author, price, id })
   return (
     <article className="book">
       <img className="Image" src={img} alt={title} />
@@ -30,4 +38,4 @@ const Book = ({ img, title, author, price }) => {
   )
 }
 
-export default BookList
+export default BookPage

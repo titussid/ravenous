@@ -1,3 +1,9 @@
+.bookPage h1 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #546fda;
+}
 .bookList {
   width: 90vw;
   max-width: 1170px;
