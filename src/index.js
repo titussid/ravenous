@@ -2,14 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './components/App/App'
-import Business from './components/Business/Business'
+import Food from './components/Food/Food'
 import Book from './components/Book/Book'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Book />
+    {/* <Book /> */}
+    <Food />
   </React.StrictMode>,
   document.getElementById('root')
 )
