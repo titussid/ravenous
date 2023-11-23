@@ -18,22 +18,22 @@ const NavBar = () => {
     <ul>
       <li>
         <a href="#" id="x1">
-          X1
+          Books
         </a>
       </li>
       <li>
         <a href="#" id="x2">
-          X2
+          Food
         </a>
       </li>
       <li>
         <a href="#" id="x3">
-          X3
+          Games
         </a>
       </li>
       <li>
         <a href="#" id="x4">
-          X4
+          Sports
         </a>
       </li>
     </ul>
