@@ -1,58 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './Book.css'
+import BookArray from './BookData.js'
 
 function BookList() {
-  return (
-    <div className="bookList">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-    </div>
-  )
-}
-const Book = () => {
-  return (
-    <article className="book">
-      <Image />
-      <Title />
-      <Author />
-      <Review />
-    </article>
-  )
+  const result = []
+  BookArray.map((book, index) => {
+    result.push(
+      <Book
+        title={book.title}
+        author={book.author}
+        img={book.img}
+        price={book.price}
+      />
+    )
+  })
+  return <div className="bookList">{result}</div>
 }
 
-const Image = () => (
-  <img
-    src="./images/matthew.jpg"
-    alt="Friends,nLovers, and Big Thing"
-    className="Image"
-    height="250"
-    allign="center"
-  />
-)
-const Title = () => (
-  <h2 className="Image"> Friends, Lovers, Big Terrible Thing </h2>
-)
-const Author = () => {
-  const inlineStyle = {
-    color: '#617d98',
-    fontSize: '0.75rem',
-    marginTop: '0.5rem',
-  }
+const Book = ({ img, title, author, price }) => {
   return (
-    <h4 className="Author" style={inlineStyle}>
-      Matthew Perry
-    </h4>
-  )
-}
-const Review = () => {
-  return (
-    <>
-      <p className="rating-bg">.</p>
-      <h3>price: 15.65$</h3>
-    </>
+    <article className="book">
+      <img className="Image" src={img} alt={title} />
+      <h2 className="title">{title} </h2>
+      <h4 className="author"> {author}</h4>
+      <p className="rating-bg"></p>
+      <h3>price: {price}</h3>
+    </article>
   )
 }
 
