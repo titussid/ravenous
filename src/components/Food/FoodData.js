@@ -1,5 +1,6 @@
 const foodData = [
   {
+    id: 1,
     imageSrc:
       'https://s3.amazonaws.com/codecademy-content/programs/react/ravenous/pizza.jpg',
     name: 'MarginOtto Pizzeria',

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from './../../logo.png'
 import './App.css'
+import Food from './../Food/Food'
+import Books from './../Book/Book'
 
 function App() {
   return (
@@ -8,35 +10,50 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <NavBar />
+      <Navigation />
     </div>
   )
 }
+const Home = () => <div>Home Component</div>
+const Games = () => <div>Games Component</div>
+const Sports = () => <div>Sports Component</div>
+const list = ['Home', 'Books', 'Food', 'Games', 'Sports']
 
-const NavBar = () => {
+const Navigation = () => {
+  const [selectedNavItem, setSelectedNavItem] = useState('Books')
+
+  const renderComponent = () => {
+    switch (selectedNavItem) {
+      case 'Home':
+        return <Home />
+      case 'Books':
+        return <Books />
+      case 'Food':
+        return <Food />
+      case 'Games':
+        return <Games />
+      case 'Sports':
+        return <Sports />
+      default:
+        return null
+    }
+  }
+
   return (
-    <ul>
-      <li>
-        <a href="#" id="x1">
-          Books
-        </a>
-      </li>
-      <li>
-        <a href="#" id="x2">
-          Food
-        </a>
-      </li>
-      <li>
-        <a href="#" id="x3">
-          Games
-        </a>
-      </li>
-      <li>
-        <a href="#" id="x4">
-          Sports
-        </a>
-      </li>
-    </ul>
+    <>
+      <nav>
+        <ul>
+          {list.map((item) => (
+            <li key={item} onClick={() => setSelectedNavItem(item)}>
+              <a href="#" id={item}>
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div>{renderComponent()}</div>
+    </>
   )
 }
 
