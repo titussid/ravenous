@@ -1,6 +1,6 @@
 .bookPage h1 {
   text-align: center;
-  font-size: 15px;
+  font-size: 35px;
   font-weight: bold;
   color: #546fda;
 }
@@ -26,7 +26,7 @@
 .book img {
   width: 100%;
   object-fit: cover;
-  height: 250px;
+  height: 200px;
 }
 .book h2 {
   margin-top: 1rem;
