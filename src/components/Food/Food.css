@@ -21,7 +21,7 @@
 .food {
   background: #fff;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 .food img {
@@ -48,4 +48,15 @@
   background-position: 0 -41px;
   background-size: 512px 512px;
   background-repeat: no-repeat;
+}
+
+.food h3 {
+  margin: 5px auto;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+.food button {
+  color: #0e29a3e3;
+  margin: 5px auto;
+  text-transform: capitalize;
 }

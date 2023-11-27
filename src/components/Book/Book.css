@@ -20,7 +20,7 @@
 .book {
   background: #fff;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 .book img {
@@ -33,19 +33,32 @@
   font-size: 1rem;
 }
 .book h4 {
-  color: '#617d98' !important;
-  margin-top: '0.5rem';
-  font-size: '0.75rem';
+  color: #617d98;
+  margin: 0.5rem auto;
+  font-size: 0.75rem;
   letter-spacing: 2px;
 }
+.book p {
+  margin: 5px auto;
+  font-size: 0.75rem;
 
-.rating-bg {
-  display: block;
-  width: 84px;
-  margin: 0 auto;
-  height: 20px;
-  background-image: url(https://m.media-amazon.com/images/S/sash/6dUGEhUS6xmUcyj.png);
-  background-position: 0 -41px;
-  background-size: 512px 512px;
-  background-repeat: no-repeat;
+  .rating-bg {
+    display: block;
+    width: 84px;
+    height: 20px;
+    background-image: url(https://m.media-amazon.com/images/S/sash/6dUGEhUS6xmUcyj.png);
+    background-position: 0 -41px;
+    background-size: 512px 512px;
+    background-repeat: no-repeat;
+  }
+}
+.book h3 {
+  margin: 5px auto;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+.book button {
+  color: #0e29a3e3;
+  margin: 5px auto;
+  text-transform: capitalize;
 }

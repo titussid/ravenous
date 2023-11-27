@@ -24,8 +24,9 @@ const FoodList = () => {
         <p>{address}</p>
         <p>{city}</p>
         <h3>{category}</h3>
-        <h3 className="rating-bg"></h3>
+        <p className="rating-bg"></p>
         <p>{reviewCount} reviews</p>
+        <button type="button">Fetch info</button>
       </article>
     )
   })
